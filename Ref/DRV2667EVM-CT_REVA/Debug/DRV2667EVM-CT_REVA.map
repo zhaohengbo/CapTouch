@@ -1,0 +1,1003 @@
+******************************************************************************
+                  MSP430 Linker PC v4.0.0                      
+******************************************************************************
+>> Linked Thu Mar 14 22:31:07 2013
+
+OUTPUT FILE NAME:   <DRV2667EVM-CT_REVA.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000de24
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SFR                   00000000   00000010  00000000  00000010  RWIX
+  PERIPHERALS_8BIT      00000010   000000f0  00000000  000000f0  RWIX
+  PERIPHERALS_16BIT     00000100   00000100  00000000  00000100  RWIX
+  RAM                   00000200   00000200  000001ce  00000032  RWIX
+  INFOD                 00001000   00000040  00000000  00000040  RWIX
+  INFOC                 00001040   00000040  00000000  00000040  RWIX
+  INFOB                 00001080   00000040  00000000  00000040  RWIX
+  INFOA                 000010c0   00000040  00000000  00000040  RWIX
+  FLASH                 0000c000   00003fe0  000028ab  00001735  RWIX
+  INT00                 0000ffe0   00000002  00000000  00000002  RWIX
+  INT01                 0000ffe2   00000002  00000000  00000002  RWIX
+  INT02                 0000ffe4   00000002  00000000  00000002  RWIX
+  INT03                 0000ffe6   00000002  00000000  00000002  RWIX
+  INT04                 0000ffe8   00000002  00000000  00000002  RWIX
+  INT05                 0000ffea   00000002  00000000  00000002  RWIX
+  INT06                 0000ffec   00000002  00000002  00000000  RWIX
+  INT07                 0000ffee   00000002  00000002  00000000  RWIX
+  INT08                 0000fff0   00000002  00000000  00000002  RWIX
+  INT09                 0000fff2   00000002  00000002  00000000  RWIX
+  INT10                 0000fff4   00000002  00000002  00000000  RWIX
+  INT11                 0000fff6   00000002  00000000  00000002  RWIX
+  INT12                 0000fff8   00000002  00000002  00000000  RWIX
+  INT13                 0000fffa   00000002  00000000  00000002  RWIX
+  INT14                 0000fffc   00000002  00000000  00000002  RWIX
+  RESET                 0000fffe   00000002  00000002  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.pinit     0    0000c000    00000000     UNINITIALIZED
+
+.bss       0    00000200    0000017e     UNINITIALIZED
+                  00000200    000000d3     Recorder.obj (.bss)
+                  000002d3    00000001     --HOLE--
+                  000002d4    00000040     SimonGame.obj (.bss)
+                  00000314    00000020     BinaryModes.obj (.bss)
+                  00000334    00000016     CTS_Layer.obj (.bss)
+                  0000034a    00000010     CapTouchBoard.obj (.bss)
+                  0000035a    0000000c     I2C.obj (.bss)
+                  00000366    00000006     main.obj (.bss)
+                  0000036c    00000005     Haptics.obj (.bss)
+                  00000371    00000001     --HOLE--
+                  00000372    00000004     rts430.lib : _lock.obj (.bss)
+                  00000376    00000004                : boot.obj (.bss)
+                  0000037a    00000004                : rand.obj (.bss)
+
+.stack     0    000003b0    00000050     UNINITIALIZED
+                  000003b0    00000002     rts430.lib : boot.obj (.stack)
+                  000003b2    0000004e     --HOLE--
+
+.text      0    0000c000    00002200     
+                  0000c000    0000071e     BinaryModes.obj (.text:BinaryModes)
+                  0000c71e    0000040c     main.obj (.text:main)
+                  0000cb2a    000003b2     CTS_Layer.obj (.text:TI_CAPT_Custom)
+                  0000cedc    0000012a     CTS_HAL.obj (.text:TI_CTS_RO_PINOSC_TA0_WDTp_HAL)
+                  0000d006    00000116     Haptics.obj (.text:SendWaveform_Mode1)
+                  0000d11c    000000d0     CTS_Layer.obj (.text:Dominant_Element)
+                  0000d1ec    000000ca     CapTouchBoard.obj (.text:CapTouch_ModeLEDsScroll)
+                  0000d2b6    000000c0     SimonGame.obj (.text:Simon_CountDownSequence)
+                  0000d376    000000ba     Haptics.obj (.text:Haptics_OutputWaveform)
+                  0000d430    00000078     Recorder.obj (.text:Recorder_Playback)
+                  0000d4a8    0000006e     Recorder.obj (.text:Recorder_Record)
+                  0000d516    0000006c     CapTouchBoard.obj (.text:CapTouch_SetBinaryMode)
+                  0000d582    0000006a     I2C.obj (.text:USCIAB0TX_ISR)
+                  0000d5ec    00000066     LibraryModes.obj (.text:LibraryModes)
+                  0000d652    00000064     Haptics.obj (.text:Haptics_Init)
+                  0000d6b6    00000062     CTS_Layer.obj (.text:TI_CAPT_Update_Baseline)
+                  0000d718    0000005a     SimonGame.obj (.text:Simon_ShowPattern)
+                  0000d772    00000058     Haptics.obj (.text:Haptics_HardwareMode)
+                  0000d7ca    00000054     SimonGame.obj (.text:Simon_IncorrectSequence)
+                  0000d81e    00000050     CapTouchBoard.obj (.text:CapTouch_UnsetBinaryMode)
+                  0000d86e    00000050     SimonGame.obj (.text:Simon_Play)
+                  0000d8be    0000004c     rts430.lib : lsr16.obj (.text)
+                  0000d90a    00000046                : autoinit.obj (.text:_auto_init)
+                  0000d950    00000042     SimonGame.obj (.text:Simon_VerifyPattern)
+                  0000d992    00000040     CapTouchBoard.obj (.text:CapTouch_FlashButtonLEDs)
+                  0000d9d2    00000040     CapTouchBoard.obj (.text:CapTouch_FlashModeLEDs)
+                  0000da12    0000003e     I2C.obj (.text:I2C_ReadSingleByte)
+                  0000da50    0000003a     SimonGame.obj (.text:Simon_GeneratePattern)
+                  0000da8a    00000038     CTS_Layer.obj (.text:TI_CAPT_Buttons)
+                  0000dac2    00000038     I2C.obj (.text:TI_USCI_I2C_receiveinit)
+                  0000dafa    00000038     I2C.obj (.text:TI_USCI_I2C_transmitinit)
+                  0000db32    00000038     rts430.lib : rand.obj (.text:rand)
+                  0000db6a    00000036     CapTouchBoard.obj (.text:CapTouch_FlashDeviceRevision)
+                  0000dba0    00000036     CapTouchBoard.obj (.text:CapTouch_Init)
+                  0000dbd6    00000036     I2C.obj (.text:TI_USCI_I2C_receive)
+                  0000dc0c    00000034     I2C.obj (.text:I2C_WriteMultiByte)
+                  0000dc40    00000032     CapTouchBoard.obj (.text:CapTouch_ButtonLEDOnSequence)
+                  0000dc72    00000032     CapTouchBoard.obj (.text:CapTouch_EnableOnHold)
+                  0000dca4    00000032     I2C.obj (.text:USCIAB0RX_ISR)
+                  0000dcd6    0000002c     Haptics.obj (.text:Haptics_SendWaveform)
+                  0000dd02    0000002c     rts430.lib : asr16.obj (.text)
+                  0000dd2e    0000002c                : lsl16.obj (.text)
+                  0000dd5a    0000002a     CapTouchBoard.obj (.text:CapTouch_ButtonLEDOffSequence)
+                  0000dd84    0000002a     CapTouchBoard.obj (.text:CapTouch_FlashDeviceID)
+                  0000ddae    00000028     CapTouchBoard.obj (.text:CapTouch_FlashCodeRevision)
+                  0000ddd6    00000028     Recorder.obj (.text:Recorder_PlayToggle)
+                  0000ddfe    00000026     Recorder.obj (.text:Recorder_Reset)
+                  0000de24    00000026     rts430.lib : boot.obj (.text:_c_int00_noexit)
+                  0000de4a    00000026                : mult32.obj (.text)
+                  0000de70    00000024     Recorder.obj (.text:Recorder_RecordToggle)
+                  0000de94    00000022     CapTouchBoard.obj (.text:CapTouch_DecrementModeCarousel)
+                  0000deb6    00000022     CapTouchBoard.obj (.text:CapTouch_IncrementModeCarousel)
+                  0000ded8    00000020     CapTouchBoard.obj (.text:CapTouch_DecrementMode)
+                  0000def8    00000020     CapTouchBoard.obj (.text:CapTouch_IncrementMode)
+                  0000df18    0000001e     Recorder.obj (.text:Recorder_Init)
+                  0000df36    0000001c     Haptics.obj (.text:Haptics_SetGain)
+                  0000df52    0000001c     Timer.obj (.text:sleep)
+                  0000df6e    0000001c     Timer.obj (.text:timerdelay)
+                  0000df8a    0000001a     CapTouchBoard.obj (.text:CapTouch_PowerUpSequence)
+                  0000dfa4    0000001a     SimonGame.obj (.text:Simon_IntroSequence)
+                  0000dfbe    00000018     main.obj (.text:ISR_Timer0_A0)
+                  0000dfd6    00000018     rts430.lib : rand.obj (.text:srand)
+                  0000dfee    00000016     I2C.obj (.text:I2C_WriteSingleByte)
+                  0000e004    00000016     rts430.lib : div16u.obj (.text)
+                  0000e01a    00000014     CapTouchBoard.obj (.text:CapTouch_DecrementModeBinary)
+                  0000e02e    00000014     CapTouchBoard.obj (.text:CapTouch_IncrementModeBinary)
+                  0000e042    00000014     Haptics.obj (.text:Haptics_EffectActive)
+                  0000e056    00000014     I2C.obj (.text:TI_USCI_I2C_transmit)
+                  0000e06a    00000014     rts430.lib : mult16.obj (.text)
+                  0000e07e    00000012     CapTouchBoard.obj (.text:CapTouch_ModeLEDBinary)
+                  0000e090    00000012     rts430.lib : memcpy.obj (.text:memcpy)
+                  0000e0a2    00000010     CapTouchBoard.obj (.text:CapTouch_RepeatReset)
+                  0000e0b2    00000010     Haptics.obj (.text:Haptics_DisableTrigger)
+                  0000e0c2    00000010     Haptics.obj (.text:Haptics_EnableTrigger)
+                  0000e0d2    00000010     CTS_Layer.obj (.text:TI_CAPT_Init_Baseline)
+                  0000e0e2    00000010     rts430.lib : epilog.obj (.text)
+                  0000e0f2    0000000e     CapTouchBoard.obj (.text:CapTouch_ModeRepeatReset)
+                  0000e100    0000000e     CapTouchBoard.obj (.text:CapTouch_SetModeLEDs)
+                  0000e10e    0000000e     SimonGame.obj (.text:Simon_EffectButton1)
+                  0000e11c    0000000e     SimonGame.obj (.text:Simon_EffectButton2)
+                  0000e12a    0000000e     SimonGame.obj (.text:Simon_EffectButton3)
+                  0000e138    0000000e     SimonGame.obj (.text:Simon_EffectButton4)
+                  0000e146    0000000e     SimonGame.obj (.text:Simon_Init)
+                  0000e154    0000000e     CTS_Layer.obj (.text:TI_CAPT_Raw)
+                  0000e162    0000000a     CapTouchBoard.obj (.text:CapTouch_RepeatOnHold)
+                  0000e16c    0000000a     CapTouchBoard.obj (.text:CapTouch_UnfreezeLEDs)
+                  0000e176    0000000a     I2C.obj (.text:I2C_IsNAK)
+                  0000e180    0000000a     I2C.obj (.text:TI_USCI_I2C_notready)
+                  0000e18a    00000008     CapTouchBoard.obj (.text:CapTouch_ButtonLEDsOff)
+                  0000e192    00000008     CapTouchBoard.obj (.text:CapTouch_ButtonLEDsOn)
+                  0000e19a    00000008     CapTouchBoard.obj (.text:CapTouch_ModeLEDsOff)
+                  0000e1a2    00000008     CapTouchBoard.obj (.text:CapTouch_ModeLEDsOn)
+                  0000e1aa    00000008     SimonGame.obj (.text:Simon_PlayButton)
+                  0000e1b2    00000008     CTS_HAL.obj (.text:watchdog_timer)
+                  0000e1ba    00000006     CapTouchBoard.obj (.text:CapTouch_FreezeLEDs)
+                  0000e1c0    00000006     CapTouchBoard.obj (.text:CapTouch_FreezeModeLEDs)
+                  0000e1c6    00000006     CapTouchBoard.obj (.text:CapTouch_GetBinaryMode)
+                  0000e1cc    00000006     Haptics.obj (.text:Haptics_GetDefaultBoostVoltage)
+                  0000e1d2    00000006     Haptics.obj (.text:Haptics_IsEffectActive)
+                  0000e1d8    00000006     Haptics.obj (.text:Haptics_OutputEnableSet)
+                  0000e1de    00000006     Haptics.obj (.text:Haptics_SetDefaultBoostVoltage)
+                  0000e1e4    00000006     I2C.obj (.text:I2C_GetNAKValue)
+                  0000e1ea    00000006     SimonGame.obj (.text:Simon_Reset)
+                  0000e1f0    00000006     main.obj (.text:Timer_A1_ISR)
+                  0000e1f6    00000004     rts430.lib : pre_init.obj (.text:_system_pre_init)
+                  0000e1fa    00000004                : exit.obj (.text:abort)
+                  0000e1fe    00000002                : _lock.obj (.text:_nop)
+
+.const     0    0000e200    00000595     
+                  0000e200    00000102     WaveformData.obj (.const:TWOTONE)
+                  0000e302    000000f0     WaveformData.obj (.const:sinewaveform)
+                  0000e3f2    000000cd     WaveformData.obj (.const:DRV2667_DATA)
+                  0000e4bf    00000001     --HOLE-- [fill = 0]
+                  0000e4c0    000000c5     WaveformData.obj (.const:DRV2667_HEADER)
+                  0000e585    00000001     --HOLE-- [fill = 0]
+                  0000e586    000000bc     Actuator_Waveforms.obj (.const)
+                  0000e642    0000006c     structure.obj (.const)
+                  0000e6ae    00000028     LibraryModes.obj (.const:waveformLibrary)
+                  0000e6d6    00000008     Actuator_Waveforms.obj (.const:longClickBounce_data)
+                  0000e6de    00000006     Actuator_Waveforms.obj (.const:clickBounce_data)
+                  0000e6e4    00000006     Actuator_Waveforms.obj (.const:flyBy_data)
+                  0000e6ea    00000006     Actuator_Waveforms.obj (.const:transitionClick_data)
+                  0000e6f0    00000004     Actuator_Waveforms.obj (.const:alert1_data)
+                  0000e6f4    00000004     Actuator_Waveforms.obj (.const:alert2_data)
+                  0000e6f8    00000004     Actuator_Waveforms.obj (.const:alert3_data)
+                  0000e6fc    00000004     Actuator_Waveforms.obj (.const:alert4_data)
+                  0000e700    00000004     Actuator_Waveforms.obj (.const:analogMode100_data)
+                  0000e704    00000004     Actuator_Waveforms.obj (.const:analogMode150_data)
+                  0000e708    00000004     Actuator_Waveforms.obj (.const:analogMode200_data)
+                  0000e70c    00000004     Actuator_Waveforms.obj (.const:analogMode50_data)
+                  0000e710    00000004     Actuator_Waveforms.obj (.const:analogModeExit_data)
+                  0000e714    00000004     Actuator_Waveforms.obj (.const:bounce100_data)
+                  0000e718    00000004     Actuator_Waveforms.obj (.const:bounce150_data)
+                  0000e71c    00000004     Actuator_Waveforms.obj (.const:bounce200_data)
+                  0000e720    00000004     Actuator_Waveforms.obj (.const:bounce250_data)
+                  0000e724    00000004     Actuator_Waveforms.obj (.const:click150_data)
+                  0000e728    00000004     Actuator_Waveforms.obj (.const:click200_data)
+                  0000e72c    00000004     Actuator_Waveforms.obj (.const:click250_data)
+                  0000e730    00000004     Actuator_Waveforms.obj (.const:click300_data)
+                  0000e734    00000004     Actuator_Waveforms.obj (.const:ding_data)
+                  0000e738    00000004     Actuator_Waveforms.obj (.const:dynamicWaveformNoRepeatWait1s_data)
+                  0000e73c    00000004     Actuator_Waveforms.obj (.const:dynamicWaveformNoRepeat_data)
+                  0000e740    00000004     Actuator_Waveforms.obj (.const:dynamicWaveform_data)
+                  0000e744    00000004     Actuator_Waveforms.obj (.const:mode2_twotone_data)
+                  0000e748    00000004     Actuator_Waveforms.obj (.const:pianoA5_data)
+                  0000e74c    00000004     Actuator_Waveforms.obj (.const:pianoA6_data)
+                  0000e750    00000004     Actuator_Waveforms.obj (.const:pianoAsharp5_data)
+                  0000e754    00000004     Actuator_Waveforms.obj (.const:pianoAsharp6_data)
+                  0000e758    00000004     Actuator_Waveforms.obj (.const:pianoB5_data)
+                  0000e75c    00000004     Actuator_Waveforms.obj (.const:pianoB6_data)
+                  0000e760    00000004     Actuator_Waveforms.obj (.const:pianoC6_data)
+                  0000e764    00000004     Actuator_Waveforms.obj (.const:pianoD6_data)
+                  0000e768    00000004     Actuator_Waveforms.obj (.const:pianoE6_data)
+                  0000e76c    00000004     Actuator_Waveforms.obj (.const:pianoF5_data)
+                  0000e770    00000004     Actuator_Waveforms.obj (.const:pianoF6_data)
+                  0000e774    00000004     Actuator_Waveforms.obj (.const:pianoG5_data)
+                  0000e778    00000004     Actuator_Waveforms.obj (.const:pianoG6_data)
+                  0000e77c    00000004     Actuator_Waveforms.obj (.const:transition100_data)
+                  0000e780    00000004     Actuator_Waveforms.obj (.const:transition150_data)
+                  0000e784    00000004     Actuator_Waveforms.obj (.const:transition200_data)
+                  0000e788    00000004     Actuator_Waveforms.obj (.const:transition250_data)
+                  0000e78c    00000002     Actuator_Waveforms.obj (.const:mode1_alert_data)
+                  0000e78e    00000002     Actuator_Waveforms.obj (.const:mode1_bump_data)
+                  0000e790    00000002     Actuator_Waveforms.obj (.const:mode1_click_data)
+                  0000e792    00000002     Actuator_Waveforms.obj (.const:mode1_tick_data)
+                  0000e794    00000001     WaveformData.obj (.const)
+
+.cinit     0    0000e796    00000116     
+                  0000e796    0000004d     CapTouchBoard.obj (.cinit)
+                  0000e7e3    00000001     --HOLE-- [fill = 0]
+                  0000e7e4    0000003f     BinaryModes.obj (.cinit)
+                  0000e823    00000001     --HOLE-- [fill = 0]
+                  0000e824    0000002f     Recorder.obj (.cinit)
+                  0000e853    00000001     --HOLE-- [fill = 0]
+                  0000e854    00000024     SimonGame.obj (.cinit)
+                  0000e878    00000011     Haptics.obj (.cinit)
+                  0000e889    00000001     --HOLE-- [fill = 0]
+                  0000e88a    0000000b     I2C.obj (.cinit)
+                  0000e895    00000001     --HOLE-- [fill = 0]
+                  0000e896    00000008     rts430.lib : rand.obj (.cinit)
+                  0000e89e    00000006     CTS_Layer.obj (.cinit)
+                  0000e8a4    00000005     main.obj (.cinit)
+                  0000e8a9    00000001     --HOLE-- [fill = 0]
+                  0000e8aa    00000002     (.pad.cinit) [fill = 0]
+
+.int06     0    0000ffec    00000002     
+                  0000ffec    00000002     I2C.obj (.int06)
+
+.int07     0    0000ffee    00000002     
+                  0000ffee    00000002     I2C.obj (.int07)
+
+.int09     0    0000fff2    00000002     
+                  0000fff2    00000002     main.obj (.int09)
+
+.int10     0    0000fff4    00000002     
+                  0000fff4    00000002     CTS_HAL.obj (.int10)
+
+.int12     0    0000fff8    00000002     
+                  0000fff8    00000002     main.obj (.int12)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430.lib : boot.obj (.reset)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000200   .bss
+0000c000   .text
+0000004a   ADC10AE0
+000001b0   ADC10CTL0
+000001b2   ADC10CTL1
+00000048   ADC10DTC0
+00000049   ADC10DTC1
+000001b4   ADC10MEM
+000001bc   ADC10SA
+00000057   BCSCTL1
+00000058   BCSCTL2
+00000053   BCSCTL3
+0000c000   BinaryModes
+0000e1fa   C$$EXIT
+00000059   CACTL1
+0000005a   CACTL2
+000010fb   CALBC1_12MHZ
+000010f9   CALBC1_16MHZ
+000010ff   CALBC1_1MHZ
+000010fd   CALBC1_8MHZ
+000010fa   CALDCO_12MHZ
+000010f8   CALDCO_16MHZ
+000010fe   CALDCO_1MHZ
+000010fc   CALDCO_8MHZ
+0000005b   CAPD
+0000dd5a   CapTouch_ButtonLEDOffSequence
+0000dc40   CapTouch_ButtonLEDOnSequence
+0000e18a   CapTouch_ButtonLEDsOff
+0000e192   CapTouch_ButtonLEDsOn
+0000ded8   CapTouch_DecrementMode
+0000e01a   CapTouch_DecrementModeBinary
+0000de94   CapTouch_DecrementModeCarousel
+0000dc72   CapTouch_EnableOnHold
+0000d992   CapTouch_FlashButtonLEDs
+0000ddae   CapTouch_FlashCodeRevision
+0000dd84   CapTouch_FlashDeviceID
+0000db6a   CapTouch_FlashDeviceRevision
+0000d9d2   CapTouch_FlashModeLEDs
+0000e1ba   CapTouch_FreezeLEDs
+0000e1c0   CapTouch_FreezeModeLEDs
+0000e1c6   CapTouch_GetBinaryMode
+0000def8   CapTouch_IncrementMode
+0000e02e   CapTouch_IncrementModeBinary
+0000deb6   CapTouch_IncrementModeCarousel
+0000dba0   CapTouch_Init
+0000e07e   CapTouch_ModeLEDBinary
+0000e19a   CapTouch_ModeLEDsOff
+0000e1a2   CapTouch_ModeLEDsOn
+0000d1ec   CapTouch_ModeLEDsScroll
+0000e0f2   CapTouch_ModeRepeatReset
+0000df8a   CapTouch_PowerUpSequence
+00000350   CapTouch_RandomNumber
+0000e162   CapTouch_RepeatOnHold
+0000e0a2   CapTouch_RepeatReset
+0000d516   CapTouch_SetBinaryMode
+0000e100   CapTouch_SetModeLEDs
+0000e16c   CapTouch_UnfreezeLEDs
+0000d81e   CapTouch_UnsetBinaryMode
+0000034b   CapTouch_isBinaryModeCounter
+0000034d   CapTouch_isEffectBtnReleased
+0000034e   CapTouch_isLEDFrozen
+0000034c   CapTouch_isModeBtnReleased
+0000034f   CapTouch_isModeLEDFrozen
+0000034a   CapTouch_mode
+00000056   DCOCTL
+0000e3f2   DRV2667_DATA
+0000e4c0   DRV2667_HEADER
+0000d11c   Dominant_Element
+00000128   FCTL1
+0000012a   FCTL2
+0000012c   FCTL3
+0000e0b2   Haptics_DisableTrigger
+0000e042   Haptics_EffectActive
+0000e0c2   Haptics_EnableTrigger
+0000e1cc   Haptics_GetDefaultBoostVoltage
+0000d772   Haptics_HardwareMode
+0000d652   Haptics_Init
+0000e1d2   Haptics_IsEffectActive
+0000e1d8   Haptics_OutputEnableSet
+0000d376   Haptics_OutputWaveform
+0000dcd6   Haptics_SendWaveform
+0000e1de   Haptics_SetDefaultBoostVoltage
+0000df36   Haptics_SetGain
+0000e1e4   I2C_GetNAKValue
+0000e176   I2C_IsNAK
+0000da12   I2C_ReadSingleByte
+0000dc0c   I2C_WriteMultiByte
+0000dfee   I2C_WriteSingleByte
+00000000   IE1
+00000001   IE2
+00000002   IFG1
+00000003   IFG2
+0000dfbe   ISR_Timer0_A0
+0000dd02   I_ASR
+0000dd2a   I_ASR_1
+0000dd18   I_ASR_10
+0000dd16   I_ASR_11
+0000dd14   I_ASR_12
+0000dd12   I_ASR_13
+0000dd10   I_ASR_14
+0000dd0e   I_ASR_15
+0000dd28   I_ASR_2
+0000dd26   I_ASR_3
+0000dd24   I_ASR_4
+0000dd22   I_ASR_5
+0000dd20   I_ASR_6
+0000dd1e   I_ASR_7
+0000dd1c   I_ASR_8
+0000dd1a   I_ASR_9
+0000dd2e   I_LSL
+0000dd56   I_LSL_1
+0000dd44   I_LSL_10
+0000dd42   I_LSL_11
+0000dd40   I_LSL_12
+0000dd3e   I_LSL_13
+0000dd3c   I_LSL_14
+0000dd3a   I_LSL_15
+0000dd54   I_LSL_2
+0000dd52   I_LSL_3
+0000dd50   I_LSL_4
+0000dd4e   I_LSL_5
+0000dd4c   I_LSL_6
+0000dd4a   I_LSL_7
+0000dd48   I_LSL_8
+0000dd46   I_LSL_9
+0000d8be   I_LSR
+0000d904   I_LSR_1
+0000d8e0   I_LSR_10
+0000d8dc   I_LSR_11
+0000d8d8   I_LSR_12
+0000d8d4   I_LSR_13
+0000d8d0   I_LSR_14
+0000d8cc   I_LSR_15
+0000d900   I_LSR_2
+0000d8fc   I_LSR_3
+0000d8f8   I_LSR_4
+0000d8f4   I_LSR_5
+0000d8f0   I_LSR_6
+0000d8ec   I_LSR_7
+0000d8e8   I_LSR_8
+0000d8e4   I_LSR_9
+00000368   IsAnalogModeActive
+0000d5ec   LibraryModes
+0000035e   NAK_Occurred
+00000022   P1DIR
+00000025   P1IE
+00000024   P1IES
+00000023   P1IFG
+00000020   P1IN
+00000021   P1OUT
+00000027   P1REN
+00000026   P1SEL
+00000041   P1SEL2
+0000002a   P2DIR
+0000002d   P2IE
+0000002c   P2IES
+0000002b   P2IFG
+00000028   P2IN
+00000029   P2OUT
+0000002f   P2REN
+0000002e   P2SEL
+00000042   P2SEL2
+0000001a   P3DIR
+00000018   P3IN
+00000019   P3OUT
+00000010   P3REN
+0000001b   P3SEL
+00000043   P3SEL2
+0000df18   Recorder_Init
+0000ddd6   Recorder_PlayToggle
+0000d430   Recorder_Playback
+0000d4a8   Recorder_Record
+0000de70   Recorder_RecordToggle
+0000ddfe   Recorder_Reset
+0000d2b6   Simon_CountDownSequence
+0000e10e   Simon_EffectButton1
+0000e11c   Simon_EffectButton2
+0000e12a   Simon_EffectButton3
+0000e138   Simon_EffectButton4
+0000da50   Simon_GeneratePattern
+0000d7ca   Simon_IncorrectSequence
+0000e146   Simon_Init
+0000dfa4   Simon_IntroSequence
+0000d86e   Simon_Play
+0000e1aa   Simon_PlayButton
+0000e1ea   Simon_Reset
+0000d718   Simon_ShowPattern
+0000d950   Simon_VerifyPattern
+00000172   TA0CCR0
+00000174   TA0CCR1
+00000176   TA0CCR2
+00000162   TA0CCTL0
+00000164   TA0CCTL1
+00000166   TA0CCTL2
+00000160   TA0CTL
+0000012e   TA0IV
+00000170   TA0R
+00000192   TA1CCR0
+00000194   TA1CCR1
+00000196   TA1CCR2
+00000182   TA1CCTL0
+00000184   TA1CCTL1
+00000186   TA1CCTL2
+00000180   TA1CTL
+0000011e   TA1IV
+00000190   TA1R
+0000da8a   TI_CAPT_Buttons
+0000cb2a   TI_CAPT_Custom
+0000e0d2   TI_CAPT_Init_Baseline
+0000e154   TI_CAPT_Raw
+0000d6b6   TI_CAPT_Update_Baseline
+0000cedc   TI_CTS_RO_PINOSC_TA0_WDTp_HAL
+0000e180   TI_USCI_I2C_notready
+0000dbd6   TI_USCI_I2C_receive
+0000dac2   TI_USCI_I2C_receiveinit
+0000e056   TI_USCI_I2C_transmit
+0000dafa   TI_USCI_I2C_transmitinit
+00000360   TI_receive_field
+00000362   TI_transmit_field
+0000e200   TWOTONE
+0000e1f0   Timer_A1_ISR
+0000005d   UCA0ABCTL
+00000062   UCA0BR0
+00000063   UCA0BR1
+00000060   UCA0CTL0
+00000061   UCA0CTL1
+0000005f   UCA0IRRCTL
+0000005e   UCA0IRTCTL
+00000064   UCA0MCTL
+00000066   UCA0RXBUF
+00000065   UCA0STAT
+00000067   UCA0TXBUF
+0000006a   UCB0BR0
+0000006b   UCB0BR1
+00000068   UCB0CTL0
+00000069   UCB0CTL1
+0000006c   UCB0I2CIE
+00000118   UCB0I2COA
+0000011a   UCB0I2CSA
+0000006e   UCB0RXBUF
+0000006d   UCB0STAT
+0000006f   UCB0TXBUF
+0000dca4   USCIAB0RX_ISR
+0000d582   USCIAB0TX_ISR
+00000120   WDTCTL
+00000400   __STACK_END
+00000050   __STACK_SIZE
+00000001   __TI_args_main
+00000001   __TI_auto_init
+00000001   __TI_exit
+ffffffff   __binit__
+00000200   __bss__
+ffffffff   __c_args__
+0000e796   __cinit__
+0000e004   __divu
+0000037e   __end__
+0000e200   __etext__
+0000e06a   __mpyi
+0000de4a   __mpyl
+ffffffff   __pinit__
+0000e004   __remu
+0000c000   __text__
+0000d90a   _auto_init
+0000de24   _c_int00
+0000de24   _c_int00_noexit
+00000376   _cleanup_ptr
+00000378   _dtors_ptr
+00000372   _lock
+0000e1fe   _nop
+0000fffe   _reset_vector
+000003b0   _stack
+0000e1f6   _system_pre_init
+00000374   _unlock
+0000e1fa   abort
+0000e60e   alert1
+0000e612   alert2
+0000e616   alert3
+0000e61a   alert4
+0000e632   analogMode100
+0000e636   analogMode150
+0000e63a   analogMode200
+0000e62e   analogMode50
+0000e63e   analogModeExit
+00000334   baseCnt
+ffffffff   binit
+0000e5ee   bounce100
+0000e5f2   bounce150
+0000e5f6   bounce200
+0000e5fa   bounce250
+0000e642   button1
+0000e64e   button2
+0000e65a   button3
+0000e666   button4
+0000030a   buttonEffects
+00000316   buttonPtr
+0000e68a   buttons
+0000035a   byteCtr
+0000e796   cinit
+0000e5de   click150
+0000e5e2   click200
+0000e5e6   click250
+0000e5ea   click300
+0000e61e   clickBounce
+00000348   ctsStatusReg
+0000e5a6   ding1k
+0000e59a   dynamicWaveform
+0000e59e   dynamicWaveformNoRepeat
+0000e5a2   dynamicWaveformNoRepeatWait1s
+0000037e   end
+0000e200   etext
+0000e626   flyBy
+0000e0ee   func_epilog_1
+0000e0ec   func_epilog_2
+0000e0ea   func_epilog_3
+0000e0e8   func_epilog_4
+0000e0e6   func_epilog_5
+0000e0e4   func_epilog_6
+0000e0e2   func_epilog_7
+0000036a   i
+00000366   lastButtonPtr
+0000035c   left_count
+0000e62a   longClickBounce
+0000c71e   main
+00000340   measCnt
+0000e090   memcpy
+0000e592   mode1_alert
+0000e586   mode1_bump
+0000e58a   mode1_click
+0000e58e   mode1_tick
+0000e596   mode2_twotone
+00000314   modePtr
+0000e69c   mode_change
+0000e672   mode_down
+0000e67e   mode_up
+0000e5b2   pianoA5
+0000e5d2   pianoA6
+0000e5b6   pianoAsharp5
+0000e5d6   pianoAsharp6
+0000e5ba   pianoB5
+0000e5da   pianoB6
+0000e5be   pianoC6
+0000e5c2   pianoD6
+0000e5c6   pianoE6
+0000e5aa   pianoF5
+0000e5ca   pianoF6
+0000e5ae   pianoG5
+0000e5ce   pianoG6
+ffffffff   pinit
+0000db32   rand
+0000e302   sinewaveform
+0000df52   sleep
+0000dfd6   srand
+0000e794   temp
+0000df6e   timerdelay
+0000e5fe   transition100
+0000e602   transition150
+0000e606   transition200
+0000e60a   transition250
+0000e622   transitionClick
+0000e1b2   watchdog_timer
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   IE1
+00000001   IE2
+00000001   __TI_args_main
+00000001   __TI_auto_init
+00000001   __TI_exit
+00000002   IFG1
+00000003   IFG2
+00000010   P3REN
+00000018   P3IN
+00000019   P3OUT
+0000001a   P3DIR
+0000001b   P3SEL
+00000020   P1IN
+00000021   P1OUT
+00000022   P1DIR
+00000023   P1IFG
+00000024   P1IES
+00000025   P1IE
+00000026   P1SEL
+00000027   P1REN
+00000028   P2IN
+00000029   P2OUT
+0000002a   P2DIR
+0000002b   P2IFG
+0000002c   P2IES
+0000002d   P2IE
+0000002e   P2SEL
+0000002f   P2REN
+00000041   P1SEL2
+00000042   P2SEL2
+00000043   P3SEL2
+00000048   ADC10DTC0
+00000049   ADC10DTC1
+0000004a   ADC10AE0
+00000050   __STACK_SIZE
+00000053   BCSCTL3
+00000056   DCOCTL
+00000057   BCSCTL1
+00000058   BCSCTL2
+00000059   CACTL1
+0000005a   CACTL2
+0000005b   CAPD
+0000005d   UCA0ABCTL
+0000005e   UCA0IRTCTL
+0000005f   UCA0IRRCTL
+00000060   UCA0CTL0
+00000061   UCA0CTL1
+00000062   UCA0BR0
+00000063   UCA0BR1
+00000064   UCA0MCTL
+00000065   UCA0STAT
+00000066   UCA0RXBUF
+00000067   UCA0TXBUF
+00000068   UCB0CTL0
+00000069   UCB0CTL1
+0000006a   UCB0BR0
+0000006b   UCB0BR1
+0000006c   UCB0I2CIE
+0000006d   UCB0STAT
+0000006e   UCB0RXBUF
+0000006f   UCB0TXBUF
+00000118   UCB0I2COA
+0000011a   UCB0I2CSA
+0000011e   TA1IV
+00000120   WDTCTL
+00000128   FCTL1
+0000012a   FCTL2
+0000012c   FCTL3
+0000012e   TA0IV
+00000160   TA0CTL
+00000162   TA0CCTL0
+00000164   TA0CCTL1
+00000166   TA0CCTL2
+00000170   TA0R
+00000172   TA0CCR0
+00000174   TA0CCR1
+00000176   TA0CCR2
+00000180   TA1CTL
+00000182   TA1CCTL0
+00000184   TA1CCTL1
+00000186   TA1CCTL2
+00000190   TA1R
+00000192   TA1CCR0
+00000194   TA1CCR1
+00000196   TA1CCR2
+000001b0   ADC10CTL0
+000001b2   ADC10CTL1
+000001b4   ADC10MEM
+000001bc   ADC10SA
+00000200   .bss
+00000200   __bss__
+0000030a   buttonEffects
+00000314   modePtr
+00000316   buttonPtr
+00000334   baseCnt
+00000340   measCnt
+00000348   ctsStatusReg
+0000034a   CapTouch_mode
+0000034b   CapTouch_isBinaryModeCounter
+0000034c   CapTouch_isModeBtnReleased
+0000034d   CapTouch_isEffectBtnReleased
+0000034e   CapTouch_isLEDFrozen
+0000034f   CapTouch_isModeLEDFrozen
+00000350   CapTouch_RandomNumber
+0000035a   byteCtr
+0000035c   left_count
+0000035e   NAK_Occurred
+00000360   TI_receive_field
+00000362   TI_transmit_field
+00000366   lastButtonPtr
+00000368   IsAnalogModeActive
+0000036a   i
+00000372   _lock
+00000374   _unlock
+00000376   _cleanup_ptr
+00000378   _dtors_ptr
+0000037e   __end__
+0000037e   end
+000003b0   _stack
+00000400   __STACK_END
+000010f8   CALDCO_16MHZ
+000010f9   CALBC1_16MHZ
+000010fa   CALDCO_12MHZ
+000010fb   CALBC1_12MHZ
+000010fc   CALDCO_8MHZ
+000010fd   CALBC1_8MHZ
+000010fe   CALDCO_1MHZ
+000010ff   CALBC1_1MHZ
+0000c000   .text
+0000c000   BinaryModes
+0000c000   __text__
+0000c71e   main
+0000cb2a   TI_CAPT_Custom
+0000cedc   TI_CTS_RO_PINOSC_TA0_WDTp_HAL
+0000d11c   Dominant_Element
+0000d1ec   CapTouch_ModeLEDsScroll
+0000d2b6   Simon_CountDownSequence
+0000d376   Haptics_OutputWaveform
+0000d430   Recorder_Playback
+0000d4a8   Recorder_Record
+0000d516   CapTouch_SetBinaryMode
+0000d582   USCIAB0TX_ISR
+0000d5ec   LibraryModes
+0000d652   Haptics_Init
+0000d6b6   TI_CAPT_Update_Baseline
+0000d718   Simon_ShowPattern
+0000d772   Haptics_HardwareMode
+0000d7ca   Simon_IncorrectSequence
+0000d81e   CapTouch_UnsetBinaryMode
+0000d86e   Simon_Play
+0000d8be   I_LSR
+0000d8cc   I_LSR_15
+0000d8d0   I_LSR_14
+0000d8d4   I_LSR_13
+0000d8d8   I_LSR_12
+0000d8dc   I_LSR_11
+0000d8e0   I_LSR_10
+0000d8e4   I_LSR_9
+0000d8e8   I_LSR_8
+0000d8ec   I_LSR_7
+0000d8f0   I_LSR_6
+0000d8f4   I_LSR_5
+0000d8f8   I_LSR_4
+0000d8fc   I_LSR_3
+0000d900   I_LSR_2
+0000d904   I_LSR_1
+0000d90a   _auto_init
+0000d950   Simon_VerifyPattern
+0000d992   CapTouch_FlashButtonLEDs
+0000d9d2   CapTouch_FlashModeLEDs
+0000da12   I2C_ReadSingleByte
+0000da50   Simon_GeneratePattern
+0000da8a   TI_CAPT_Buttons
+0000dac2   TI_USCI_I2C_receiveinit
+0000dafa   TI_USCI_I2C_transmitinit
+0000db32   rand
+0000db6a   CapTouch_FlashDeviceRevision
+0000dba0   CapTouch_Init
+0000dbd6   TI_USCI_I2C_receive
+0000dc0c   I2C_WriteMultiByte
+0000dc40   CapTouch_ButtonLEDOnSequence
+0000dc72   CapTouch_EnableOnHold
+0000dca4   USCIAB0RX_ISR
+0000dcd6   Haptics_SendWaveform
+0000dd02   I_ASR
+0000dd0e   I_ASR_15
+0000dd10   I_ASR_14
+0000dd12   I_ASR_13
+0000dd14   I_ASR_12
+0000dd16   I_ASR_11
+0000dd18   I_ASR_10
+0000dd1a   I_ASR_9
+0000dd1c   I_ASR_8
+0000dd1e   I_ASR_7
+0000dd20   I_ASR_6
+0000dd22   I_ASR_5
+0000dd24   I_ASR_4
+0000dd26   I_ASR_3
+0000dd28   I_ASR_2
+0000dd2a   I_ASR_1
+0000dd2e   I_LSL
+0000dd3a   I_LSL_15
+0000dd3c   I_LSL_14
+0000dd3e   I_LSL_13
+0000dd40   I_LSL_12
+0000dd42   I_LSL_11
+0000dd44   I_LSL_10
+0000dd46   I_LSL_9
+0000dd48   I_LSL_8
+0000dd4a   I_LSL_7
+0000dd4c   I_LSL_6
+0000dd4e   I_LSL_5
+0000dd50   I_LSL_4
+0000dd52   I_LSL_3
+0000dd54   I_LSL_2
+0000dd56   I_LSL_1
+0000dd5a   CapTouch_ButtonLEDOffSequence
+0000dd84   CapTouch_FlashDeviceID
+0000ddae   CapTouch_FlashCodeRevision
+0000ddd6   Recorder_PlayToggle
+0000ddfe   Recorder_Reset
+0000de24   _c_int00
+0000de24   _c_int00_noexit
+0000de4a   __mpyl
+0000de70   Recorder_RecordToggle
+0000de94   CapTouch_DecrementModeCarousel
+0000deb6   CapTouch_IncrementModeCarousel
+0000ded8   CapTouch_DecrementMode
+0000def8   CapTouch_IncrementMode
+0000df18   Recorder_Init
+0000df36   Haptics_SetGain
+0000df52   sleep
+0000df6e   timerdelay
+0000df8a   CapTouch_PowerUpSequence
+0000dfa4   Simon_IntroSequence
+0000dfbe   ISR_Timer0_A0
+0000dfd6   srand
+0000dfee   I2C_WriteSingleByte
+0000e004   __divu
+0000e004   __remu
+0000e01a   CapTouch_DecrementModeBinary
+0000e02e   CapTouch_IncrementModeBinary
+0000e042   Haptics_EffectActive
+0000e056   TI_USCI_I2C_transmit
+0000e06a   __mpyi
+0000e07e   CapTouch_ModeLEDBinary
+0000e090   memcpy
+0000e0a2   CapTouch_RepeatReset
+0000e0b2   Haptics_DisableTrigger
+0000e0c2   Haptics_EnableTrigger
+0000e0d2   TI_CAPT_Init_Baseline
+0000e0e2   func_epilog_7
+0000e0e4   func_epilog_6
+0000e0e6   func_epilog_5
+0000e0e8   func_epilog_4
+0000e0ea   func_epilog_3
+0000e0ec   func_epilog_2
+0000e0ee   func_epilog_1
+0000e0f2   CapTouch_ModeRepeatReset
+0000e100   CapTouch_SetModeLEDs
+0000e10e   Simon_EffectButton1
+0000e11c   Simon_EffectButton2
+0000e12a   Simon_EffectButton3
+0000e138   Simon_EffectButton4
+0000e146   Simon_Init
+0000e154   TI_CAPT_Raw
+0000e162   CapTouch_RepeatOnHold
+0000e16c   CapTouch_UnfreezeLEDs
+0000e176   I2C_IsNAK
+0000e180   TI_USCI_I2C_notready
+0000e18a   CapTouch_ButtonLEDsOff
+0000e192   CapTouch_ButtonLEDsOn
+0000e19a   CapTouch_ModeLEDsOff
+0000e1a2   CapTouch_ModeLEDsOn
+0000e1aa   Simon_PlayButton
+0000e1b2   watchdog_timer
+0000e1ba   CapTouch_FreezeLEDs
+0000e1c0   CapTouch_FreezeModeLEDs
+0000e1c6   CapTouch_GetBinaryMode
+0000e1cc   Haptics_GetDefaultBoostVoltage
+0000e1d2   Haptics_IsEffectActive
+0000e1d8   Haptics_OutputEnableSet
+0000e1de   Haptics_SetDefaultBoostVoltage
+0000e1e4   I2C_GetNAKValue
+0000e1ea   Simon_Reset
+0000e1f0   Timer_A1_ISR
+0000e1f6   _system_pre_init
+0000e1fa   C$$EXIT
+0000e1fa   abort
+0000e1fe   _nop
+0000e200   TWOTONE
+0000e200   __etext__
+0000e200   etext
+0000e302   sinewaveform
+0000e3f2   DRV2667_DATA
+0000e4c0   DRV2667_HEADER
+0000e586   mode1_bump
+0000e58a   mode1_click
+0000e58e   mode1_tick
+0000e592   mode1_alert
+0000e596   mode2_twotone
+0000e59a   dynamicWaveform
+0000e59e   dynamicWaveformNoRepeat
+0000e5a2   dynamicWaveformNoRepeatWait1s
+0000e5a6   ding1k
+0000e5aa   pianoF5
+0000e5ae   pianoG5
+0000e5b2   pianoA5
+0000e5b6   pianoAsharp5
+0000e5ba   pianoB5
+0000e5be   pianoC6
+0000e5c2   pianoD6
+0000e5c6   pianoE6
+0000e5ca   pianoF6
+0000e5ce   pianoG6
+0000e5d2   pianoA6
+0000e5d6   pianoAsharp6
+0000e5da   pianoB6
+0000e5de   click150
+0000e5e2   click200
+0000e5e6   click250
+0000e5ea   click300
+0000e5ee   bounce100
+0000e5f2   bounce150
+0000e5f6   bounce200
+0000e5fa   bounce250
+0000e5fe   transition100
+0000e602   transition150
+0000e606   transition200
+0000e60a   transition250
+0000e60e   alert1
+0000e612   alert2
+0000e616   alert3
+0000e61a   alert4
+0000e61e   clickBounce
+0000e622   transitionClick
+0000e626   flyBy
+0000e62a   longClickBounce
+0000e62e   analogMode50
+0000e632   analogMode100
+0000e636   analogMode150
+0000e63a   analogMode200
+0000e63e   analogModeExit
+0000e642   button1
+0000e64e   button2
+0000e65a   button3
+0000e666   button4
+0000e672   mode_down
+0000e67e   mode_up
+0000e68a   buttons
+0000e69c   mode_change
+0000e794   temp
+0000e796   __cinit__
+0000e796   cinit
+0000fffe   _reset_vector
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   __pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[360 symbols]
