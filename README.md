@@ -1,2 +1,2 @@
 # CapTouch
-Old but open-source CapTouch of MSP430
+Old but open-source CapTouch library of MSP430
